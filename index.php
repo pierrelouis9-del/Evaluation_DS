@@ -117,17 +117,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $modelo = "";
     $robo = 0;
 
-    if($modelo === "explorador"){
+    if ($modelo === "explorador") {
         $robo = new Explorador();
-    } elseif($modelo === "engenheiro"){
+    } elseif ($modelo === "engenheiro") {
         $robo = new Engenheiro();
-    } elseif($modelo === "defensor"){
+    } elseif ($modelo === "defensor") {
         $robo = new Defensor();
     }
 
-    if($robo != 0){
-        $_SESSION["robo"]= $robo;
-        $mensagem="robo cadastrado com successo!";
+    if ($robo != 0) {
+        $_SESSION["robo"] = $robo;
+        $mensagem = "robo cadastrado com successo!";
     }
 }
 ?>
@@ -150,11 +150,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     <option value="engenheiro"> Engenheiro</option>
                     <option value="defensor"> Defensor</option>
                 </select>
+                <button type="submit"> cadstrar</button>
             </form>
         </div>
 
         <div>
+            <?php if ($mensagem != "") { ?>
 
+                <h4> Robo cadastrado</h4>
+                <p><?= $modelo ?></p>
+
+
+            <?php } ?>
         </div>
     </main>
 </body>
