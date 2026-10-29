@@ -144,7 +144,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <body>
     <main class="container">
         <div class="inputs">
-            <form method="post">
+            <form method="POST">
                 <select name="modelo" id="modelo">
                     <option value="explorador"> Explorador</option>
                     <option value="engenheiro"> Engenheiro</option>
