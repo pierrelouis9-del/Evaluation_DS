@@ -158,7 +158,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <?php if ($mensagem != "") { ?>
 
                 <h4> Robo cadastrado</h4>
-                <p><?= $modelo ?></p>
+                <p><?= $mensagem?></p>
 
 
             <?php } ?>
